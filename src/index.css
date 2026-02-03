@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-brand-primary: #1e40af;
+  --color-brand-punchline: #facc15;
+  --color-brand-quirk: #8b5cf6;
+
+  /* Surface/Background Colors */
+  --color-surface-paper: #fdfdfd;
+  --color-surface-ink: #f1f5f9;
+  --color-surface-border: #e2e8f0;
+
+  /* Text Colors */
+  --color-text-title: #0f172a;
+  --color-text-body: #334155;
+  --color-text-funny: #4338ca;
+}
