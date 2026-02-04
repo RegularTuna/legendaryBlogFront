@@ -1,6 +1,8 @@
 import { Search, PenLine } from 'lucide-react';
 import { Logo } from './Logo';
 import { NavLinks } from './NavLinks';
+import CustomButton from '../common/CustomButton';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -25,15 +27,17 @@ export const Header = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <button className="hidden sm:flex items-center gap-2 text-sm font-semibold text-text-body hover:text-brand-primary px-4 transition-colors">
+          <button className="hidden sm:flex items-center gap-2 text-sm font-semibold text-body hover:text-brand-primary px-4 transition-colors">
             <PenLine className="w-4 h-4" />
             Write
           </button>
           
-          
-          <button className="bg-text-title text-surface-paper text-sm font-bold px-6 py-2.5 rounded-full hover:bg-brand-primary transition-all active:scale-95 shadow-sm">
-            Sign In
-          </button>
+          {/* 3. Wrap your Button in a Link */}
+          <Link to="/login"> 
+            <CustomButton variant="primary" size="md" className="rounded-full px-6">
+              Sign In
+            </CustomButton>
+          </Link>
         </div>
 
       </div>

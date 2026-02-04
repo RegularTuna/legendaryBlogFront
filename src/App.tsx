@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { MainLayout } from './layouts/MainLayout';
 import PostDetail from './pages/PostDetail';
 import { Link } from 'react-router-dom';
+import Login from './pages/Login';
 // Temporary components for testing
 const Home = () => (
   <>
@@ -23,6 +24,7 @@ function App() {
         <Route path="analytics" element={<Analytics />} />
         <Route path="profile" element={<Profile />} />
         <Route path="post/:id" element={<PostDetail />} />
+        <Route path="login" element={<Login />} />
       </Route>
     </Routes>
   );

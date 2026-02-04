@@ -3,7 +3,7 @@
 @theme {
   /* Brand Colors */
   --color-brand-primary: #1e40af;
-  --color-brand-punchline: #facc15;
+  --color-brand-contrast: #facc15;
   --color-brand-quirk: #8b5cf6;
 
   /* Surface/Background Colors */
@@ -12,7 +12,8 @@
   --color-surface-border: #e2e8f0;
 
   /* Text Colors */
-  --color-text-title: #0f172a;
-  --color-text-body: #334155;
-  --color-text-funny: #4338ca;
+  --color-title: #141F38;
+  --color-body: #334155;
+  --color-funny: #4338ca;
+  --color-testingred: #FF0000;
 }
