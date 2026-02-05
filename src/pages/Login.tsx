@@ -13,7 +13,7 @@ function Login() {
     };
   return (
     <div className='bg-surface-ink rounded-lg p-4 size-auto md:max-w-2/4 mx-auto my-4'>
-        <form className='w-full flex  flex-col items-center gap-3' onSubmit={handleSubmit}>
+        <form className='w-full flex  flex-col items-center gap-3 md' onSubmit={handleSubmit}>
 
             <div className='text-center w-full flex  flex-col items-center'>
                 <label className='font-bold' >Username</label>

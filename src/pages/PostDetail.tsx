@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import PostContent from "../components/blog/PostContent";
+import PostContent from "../components/blogpost/PostContent";
 
 import React from 'react'
-import PostLayout from "../components/blog/PostLayout";
+import PostLayout from "../components/blogpost/PostLayout";
 import savingFish2 from '../assets/savingFish2.jpg'
 
 function PostDetail() {
