@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogCard from '../components/blogpost/blogCard'
+import BlogCard from '../components/blogpost/BlogCard'
 import savingFish2 from '../assets/savingFish2.jpg'
 
 const Home = () => {
