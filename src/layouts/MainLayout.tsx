@@ -4,7 +4,7 @@ import { Header } from "../components/navigation/Header";
 export const MainLayout = () => {
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white overflow-x-hidden">
             <Header />
             <main className="max-w-7xl mx-auto px-4 py-8">
                 <Outlet/>

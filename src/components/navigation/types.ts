@@ -5,7 +5,7 @@ export interface NavItem {
 
 export const MENU_LINKS: NavItem[] = [
   { label: 'Home', path: '/' },
-  { label: 'Posts', path: '/posts' },
   { label: 'About', path: '/about' },
+  { label: 'Posts', path: '/allposts' },
   
 ];

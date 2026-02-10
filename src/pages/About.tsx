@@ -27,7 +27,7 @@ const About = () => {
                 </div>
                 <div className='my-9'>
                     <h3 className={h3stl}>What is this blog?</h3>
-                    <p className='text-center font-medium'>As an unemployed dude with a lot of free time in it's hands I needed a small project where I could showcase what I can do, so I made a blog about not-so real events.                </p>
+                    <p className='text-center font-medium'>As an unemployed guy with a lot of free time on my hands, I needed a small project to showcase my skills, so I created a blog about fictional events.                </p>
 
                 </div>
                 <div className='flex flex-col'>
@@ -93,10 +93,10 @@ const About = () => {
                     <p className='text-text-muted font-medium'>Computer Engineer Graduate</p>
 
                     <div className='mt-4 md:mt-2 flex justify-center gap-4'>
-                        <a target='_blank' href="https://www.linkedin.com/in/tiago-fortuna-561b48163/" className='bg-surface-ink border border-surface-border hover:border-brand-primary transition-all rounded-full p-2 group'>
+                        <a target='_blank' href="https://www.linkedin.com/in/tiago-fortuna-561b48163/" className='bg-white/70 border border-surface-border hover:border-brand-primary transition-all rounded-full p-2 group'>
                             <Github size={24} className="text-brand-primary group-hover:scale-110 transition-transform" />
                         </a>
-                        <a target='_blank' href="https://github.com/RegularTuna" className='bg-surface-ink border border-surface-border hover:border-brand-primary transition-all rounded-full p-2 group'>
+                        <a target='_blank' href="https://github.com/RegularTuna" className='bg-white/70 border border-surface-border hover:border-brand-primary transition-all rounded-full p-2 group'>
                             <Linkedin size={24} className="text-brand-primary group-hover:scale-110 transition-transform" />
                         </a>
                     </div>

@@ -1,13 +1,18 @@
 import { NavLink } from 'react-router-dom';
 import { MENU_LINKS } from './types';
 
-export const NavLinks = () => {
+interface NavLinkProps{
+  className?: string;
+  onLinkClick?: () => void;
+}
+export const NavLinks = ({ className, onLinkClick }: NavLinkProps) => {
   return (
-    <nav className="hidden md:flex items-center gap-1">
+    <nav className={`flex ${className}`}>
       {MENU_LINKS.map((link) => (
         <NavLink 
           key={link.path} 
           to={link.path} 
+          onClick={onLinkClick}
           className={({ isActive }) => `
             px-4 py-2 rounded-full text-sm font-medium transition-all
             ${isActive 
