@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import BlogCard from '../components/blogpost/BlogCard'
 import savingFish2 from '../assets/savingFish2.jpg'
+import CustomButton from '../components/common/CustomButton';
+import {ChevronDown} from 'lucide-react'
 
 export const AllPosts = () => {
   
@@ -51,13 +53,62 @@ export const AllPosts = () => {
   }
 ];
 
+  const ALL_CAT = [
+    "All",
+    "Politics",
+    "Unicorns"
+  ]
+  const [filter,setFilter] = useState("All");
+  const [isOpen,setIsOpen] = useState(false);
+
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)){
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
-        {MOCK_POSTS.map((post) => (
-            <BlogCard key={post.id} post={post}/>
-        )
-    )}
+
+    <>
+    <div className='relative' ref={dropdownRef}>
+      <CustomButton onClick={() => setIsOpen(!isOpen)} className='flex gap-2 px-4 py-2 rounded-full  bg-brand-quirk/50 text-brand-quirk'>{filter}
+        <ChevronDown  className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}/>
+      </CustomButton>
+      {isOpen && (
+
+        <ul className='absolute left-0 z-50 p-2 min-w-[140px] bg-white shadow-lg rounded-br-md'>
+          {ALL_CAT.map((cat) => (
+            <li>
+              <button className='w-full text-left p-1 hover:bg-gray-100' onClick={()=> {
+                setIsOpen(!isOpen);
+                setFilter(cat);
+              }}>{cat}</button>
+            </li>
+          ))}
+      </ul>
+
+      )}
     </div>
+
+
+    <div>
+      <p>Selected cat - {filter} </p>
+    </div>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
+          {MOCK_POSTS.map((post) => (
+              <BlogCard key={post.id} post={post}/>
+          )
+        )}
+      </div>
+    </>
+    
     
     
   )

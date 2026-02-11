@@ -54,7 +54,7 @@ export const Header = () => {
           onClick={() => setIsOpen(false)}
         />
           
-        <div className={`fixed top-0 right-0 h-full w-[180px] bg-surface-ink  transition-transform duration-300 ease-in-out z-50   md:hidden ${isOpen ? 'translate-x-0' : 'translate-x-full '}`}>
+        <div className={`fixed top-0 right-0 h-full w-[220px] bg-surface-ink  transition-transform duration-300 ease-in-out z-50   md:hidden ${isOpen ? 'translate-x-0' : 'translate-x-full '}`}>
           <div className=' flex flex-col h-full '>
             <div className="flex items-center bg-surface-ink/90 justify-between ">
               <span className="font-bold text-lg p-5">Menu</span>
@@ -62,8 +62,12 @@ export const Header = () => {
                 <X size={24}  />
               </button>
             </div>
-            <NavLinks onLinkClick={()=>setIsOpen(false)} className=" flex flex-col items-stretch gap-1 bg-surface-ink/70 rounded-b-md " />
-            
+            <NavLinks onLinkClick={()=>setIsOpen(false)} className=" flex flex-col items-stretch gap-1 bg-surface-ink/70  " />
+            <div className=" flex flex-col items-stretch gap-1 bg-surface-ink/70 rounded-b-md ">
+              <Link to="/login"> 
+                <p className='px-4 py-2 rounded-full text-sm font-medium transition-all text-text-body hover:bg-surface-ink hover:text-text-title'>Sign In</p>
+              </Link>
+            </div>
           </div>
           
          
